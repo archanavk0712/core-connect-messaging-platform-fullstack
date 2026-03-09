@@ -1,16 +1,84 @@
-# React + Vite
+# CoreConnect Messaging Platform – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the frontend implementation of the CoreConnect Messaging Platform built using React.
 
-Currently, two official plugins are available:
+The frontend provides the user interface for authentication, user interaction, and messaging functionality.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technology Stack
 
-## React Compiler
+React.js
+React Router
+Axios
+Context API
+HTML
+CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+* User login and registration
+* Secure authentication using JWT tokens
+* Contact list with search functionality
+* Messaging interface for sending and receiving messages
+* Persistent login using local storage
+* Responsive layout
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## UI Components
+
+Login Page
+Handles authentication and redirects authenticated users to the dashboard.
+
+Dashboard
+Displays the messaging interface.
+
+Sidebar
+
+* Contact list
+* Search functionality
+
+Chat Window
+
+* Contact header
+* Scrollable message area
+* Input field for sending messages
+
+Message Bubble
+
+* Sent messages aligned to the right
+* Received messages aligned to the left
+
+## State Management
+
+The application uses React Context API to manage global authentication state.
+
+AuthContext stores:
+
+* JWT token
+* Logged-in user details
+
+LocalStorage is used to maintain login state after page refresh.
+
+## API Integration
+
+Axios is used to communicate with the backend APIs.
+
+An Axios interceptor automatically attaches the JWT token to every request:
+
+Authorization: Bearer <token>
+
+## Running the Frontend
+
+Clone the repository
+
+git clone <frontend-repository-url>
+
+Install dependencies
+
+npm install
+
+Run the development server
+
+npm run dev
+
+The application will run on
+
+http://localhost:5173
