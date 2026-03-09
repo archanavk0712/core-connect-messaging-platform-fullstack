@@ -80,6 +80,8 @@ git clone <backend-repository-url>
 
 Navigate to the project directory
 
+Update the DB credentials in the application.properties file
+
 Run the application using Maven or your IDE
 
 The backend server will start on
